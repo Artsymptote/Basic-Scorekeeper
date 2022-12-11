@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Ping Pong Scorekeeper</title>
+</head>
+
+<body>
+    <H1 id="title">Ping Pong Scorekeeper</H1>
+    
+    <text class="scores"> 
+        <span class="score1">0</span> to <span class="score2">0</span>
+    </text> 
+
+    <h2 class="instruction">Use the buttons below to keep score.</h2>
+    
+    <!--dropdown menu-->  
+    <label for="rounds">Playing to:</label>
+    <select name="rounds" id="rounds">
+        <option value="0">0</option>
+        <option value="1">1</option> 
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </select><br>
+
+    <!--Buttons-->
+    <button class="button btn1">+1 Player 1</button>
+    <button class="button btn2">+1 Player 2</button>
+    <button class="button btn3">Reset</button>
+ 
+
+    <script src="app.js"></script>
+</body>
+
+</html>
