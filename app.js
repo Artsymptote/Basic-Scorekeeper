@@ -23,7 +23,8 @@ btn1.addEventListener("click", function () {
 	let scoreNum1 = Number(score1.innerText); //counter for the number
 	scoreNum1 += 1;
 	score1.innerText = scoreNum1;
-	if (Number(rounds.value) !== 0 && scoreNum1 === Number(rounds.value)) {
+	let matchPtDeterminer = Number(rounds.value);
+	if (matchPtDeterminer !== 0 && scoreNum1 === matchPtDeterminer) {
 		score1.style.color = "green";
 		score2.style.color = "red";
 		//Disabling button
@@ -39,7 +40,8 @@ btn2.addEventListener("click", function () {
 	let scoreNum2 = Number(score2.innerText); //counter for the number
 	scoreNum2 += 1;
 	score2.innerText = scoreNum2;
-	if (Number(rounds.value) !== 0 && scoreNum2 === Number(rounds.value)) {
+	let matchPtDeterminer = Number(rounds.value);
+	if (matchPtDeterminer !== 0 && scoreNum2 === matchPtDeterminer) {
 		score1.style.color = "red";
 		score2.style.color = "green";
 		//Disabling button
