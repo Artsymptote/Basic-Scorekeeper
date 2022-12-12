@@ -57,11 +57,16 @@ btn2.addEventListener("click", function () {
 
 //Reset
 btn3.addEventListener("click", function () {
+	isGameOver = false;
+	scoreNum1 = 0;
+	scoreNum2 = 0;
+
+	// SKM "main" functioning code
 	score1.innerText = "0";
 	score2.innerText = "0";
-	score1.style.color = "black";
-	score2.style.color = "black";
-	rounds.selectedIndex = 0;
-	btn1.disabled = false;
-	btn2.disabled = false;
+	// score1.style.color = "black";
+	// score2.style.color = "black";
+	// rounds.selectedIndex = 0;
+	// btn1.disabled = false;
+	// btn2.disabled = false;
 });
