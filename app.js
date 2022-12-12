@@ -11,7 +11,6 @@ const btn2 = document.querySelector(".btn2");
 const btn3 = document.querySelector(".btn3");
 
 //Button-to-number
-
 let scoreNum1 = 0; //counter for the number
 let scoreNum2 = 0;
 let matchPtDeterminer = 2;
@@ -56,17 +55,19 @@ btn2.addEventListener("click", function () {
 });
 
 //Reset
-btn3.addEventListener("click", function () {
+btn3.addEventListener("click", reset); //We don't add () since WE are not executing it, we're just "passing the reference"; the eventListener will execute it.
+
+function reset() {
 	isGameOver = false;
 	scoreNum1 = 0;
 	scoreNum2 = 0;
-
-	// SKM "main" functioning code
 	score1.innerText = "0";
 	score2.innerText = "0";
+
+	// SKM "main" functioning code
 	// score1.style.color = "black";
 	// score2.style.color = "black";
 	// rounds.selectedIndex = 0;
 	// btn1.disabled = false;
 	// btn2.disabled = false;
-});
+}
