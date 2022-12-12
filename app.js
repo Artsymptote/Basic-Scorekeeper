@@ -60,12 +60,3 @@ btn3.addEventListener("click", function () {
 	btn1.disabled = false;
 	btn2.disabled = false;
 });
-
-//Rounds
-//TODO 1. I want the drop down to determine which number goes red,when.
-
-scoresBox.addEventListener("change", function (e) {
-	if (Number(e.target.innerText) === Number(rounds.value)) {
-		e.target.style.color = "green;";
-	}
-});
