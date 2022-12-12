@@ -1,5 +1,4 @@
 //Score digits
-const scoresBox = document.querySelector(".scores");
 const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
 
@@ -15,14 +14,19 @@ const btn3 = document.querySelector(".btn3");
 
 let scoreNum1 = 0; //counter for the number
 let scoreNum2 = 0;
-let matchPtDeterminer = Number(rounds.value);
+let matchPtDeterminer = 2;
+let isGameOver = false;
 
 btn1.addEventListener("click", function () {
-	if (scoreNum1 !== matchPtDeterminer) {
+	if (!isGameOver) {
 		scoreNum1 += 1;
+		if (scoreNum1 === matchPtDeterminer) {
+			isGameOver = true;
+		}
 		score1.innerText = scoreNum1;
 	}
 
+	//SKM ORIGINAL FUNCTIONING CODE
 	// if (matchPtDeterminer !== 0 && scoreNum1 === matchPtDeterminer) {
 	// 	score1.style.color = "green";
 	// 	score2.style.color = "red";
@@ -33,11 +37,15 @@ btn1.addEventListener("click", function () {
 });
 
 btn2.addEventListener("click", function () {
-	if (scoreNum2 !== matchPtDeterminer) {
+	if (!isGameOver) {
 		scoreNum2 += 1;
+		if (scoreNum2 === matchPtDeterminer) {
+			isGameOver = true;
+		}
 		score2.innerText = scoreNum2;
 	}
 
+	//SKM ORIGINAL FUNCTIONING CODE
 	// if (matchPtDeterminer !== 0 && scoreNum2 === matchPtDeterminer) {
 	// 	score1.style.color = "red";
 	// 	score2.style.color = "green";
@@ -57,12 +65,3 @@ btn3.addEventListener("click", function () {
 	btn1.disabled = false;
 	btn2.disabled = false;
 });
-
-//Rounds
-//TODO 1. I want the drop down to determine which number goes red,when.
-
-// scoresBox.addEventListener("change", function (e) {
-// 	if (Number(e.target.innerText) === Number(rounds.value)) {
-// 		e.target.style.color = "green;";
-// 	}
-// });
