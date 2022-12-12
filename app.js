@@ -26,7 +26,7 @@ btn1.addEventListener("click", function () {
 		score1.innerText = scoreNum1;
 	}
 
-	//SKM ORIGINAL FUNCTIONING CODE
+	// SKM "main" functioning code
 	// if (matchPtDeterminer !== 0 && scoreNum1 === matchPtDeterminer) {
 	// 	score1.style.color = "green";
 	// 	score2.style.color = "red";
@@ -45,7 +45,7 @@ btn2.addEventListener("click", function () {
 		score2.innerText = scoreNum2;
 	}
 
-	//SKM ORIGINAL FUNCTIONING CODE
+	// SKM "main" functioning code
 	// if (matchPtDeterminer !== 0 && scoreNum2 === matchPtDeterminer) {
 	// 	score1.style.color = "red";
 	// 	score2.style.color = "green";
