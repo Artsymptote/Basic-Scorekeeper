@@ -1,5 +1,4 @@
 //Score digits
-const scoresBox = document.querySelector(".scores");
 const score1 = document.querySelector(".score1");
 const score2 = document.querySelector(".score2");
 
@@ -10,13 +9,6 @@ const rounds = document.querySelector("#rounds");
 const btn1 = document.querySelector(".btn1");
 const btn2 = document.querySelector(".btn2");
 const btn3 = document.querySelector(".btn3");
-
-//PLANS
-//*DONE! Connect the match-count dropdown with the display numbers.I want the drop down to determine which number goes red when.
-//TODO 2. I want the counting to stop working when one of the numbers reaches the match-end.
-//?when btn1 OR btn2 .innerText reaches dropdown # innerText the buttons no longer connect to the numbers?
-//* DONE! I need a counter that will keep the score.
-//* DONE! I need a reset button that resets the numbers, colors, and match-point.
 
 //Button-to-number
 btn1.addEventListener("click", function () {
@@ -34,9 +26,6 @@ btn1.addEventListener("click", function () {
 });
 
 btn2.addEventListener("click", function () {
-	console.dir(rounds);
-	console.dir(score2);
-
 	let scoreNum2 = Number(score2.innerText); //counter for the number
 	scoreNum2 += 1;
 	score2.innerText = scoreNum2;
