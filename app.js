@@ -4,6 +4,7 @@ const score2 = document.querySelector(".score2");
 
 //Drop-down & selection
 const rounds = document.querySelector("#rounds");
+let matchPtDeterminer = Number(rounds.value);
 
 //Buttons
 const btn1 = document.querySelector(".btn1");
@@ -15,28 +16,14 @@ btn1.addEventListener("click", function () {
 	let scoreNum1 = Number(score1.innerText); //counter for the number
 	scoreNum1 += 1;
 	score1.innerText = scoreNum1;
-	let matchPtDeterminer = Number(rounds.value);
-	if (matchPtDeterminer !== 0 && scoreNum1 === matchPtDeterminer) {
-		score1.style.color = "green";
-		score2.style.color = "red";
-		//Disabling button
-		btn1.disabled = true;
-		btn2.disabled = true;
-	}
+	gamePoint(scoreNum1);
 });
 
 btn2.addEventListener("click", function () {
 	let scoreNum2 = Number(score2.innerText); //counter for the number
 	scoreNum2 += 1;
 	score2.innerText = scoreNum2;
-	let matchPtDeterminer = Number(rounds.value);
-	if (matchPtDeterminer !== 0 && scoreNum2 === matchPtDeterminer) {
-		score1.style.color = "red";
-		score2.style.color = "green";
-		//Disabling button
-		btn1.disabled = true;
-		btn2.disabled = true;
-	}
+	gamePoint(scoreNum2);
 });
 
 //Reset
@@ -49,3 +36,14 @@ btn3.addEventListener("click", function () {
 	btn1.disabled = false;
 	btn2.disabled = false;
 });
+
+//External Functions
+function gamePoint(theScore) {
+	if (matchPtDeterminer !== 0 && theScore === matchPtDeterminer) {
+		score1.style.color = "red";
+		score2.style.color = "green";
+		//Disabling button
+		btn1.disabled = true;
+		btn2.disabled = true;
+	}
+}
