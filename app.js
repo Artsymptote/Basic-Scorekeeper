@@ -57,6 +57,13 @@ btn2.addEventListener("click", function () {
 //Reset
 btn3.addEventListener("click", reset); //We don't add () since WE are not executing it, we're just "passing the reference"; the eventListener will execute it.
 
+//Dropdown match-point selector
+rounds.addEventListener("change", function () {
+	matchPtDeterminer = Number(this.value); //Colt uses parseInt(), but I use Number since we just need the type converted, we don't need any decimals removed.
+	reset(); //Colt put this here because he wants the game to reset if you change the dropdown. IDK if I want that though.
+	//We DO need to execute it here--i.e. adding ()--since the event listener can only execute the anonymous function we passed it, it can't execute functions within that function.
+});
+
 function reset() {
 	isGameOver = false;
 	scoreNum1 = 0;
