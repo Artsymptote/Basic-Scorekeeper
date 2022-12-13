@@ -21,18 +21,11 @@ btn1.addEventListener("click", function () {
 		scoreNum1 += 1;
 		if (scoreNum1 === matchPtDeterminer) {
 			isGameOver = true;
+			score1.classList.add("winner");
+			score2.classList.add("loser");
 		}
 		score1.innerText = scoreNum1;
 	}
-
-	// SKM "main" functioning code
-	// if (matchPtDeterminer !== 0 && scoreNum1 === matchPtDeterminer) {
-	// 	score1.style.color = "green";
-	// 	score2.style.color = "red";
-	// 	//Disabling button
-	// 	btn1.disabled = true;
-	// 	btn2.disabled = true;
-	// }
 });
 
 btn2.addEventListener("click", function () {
@@ -40,18 +33,11 @@ btn2.addEventListener("click", function () {
 		scoreNum2 += 1;
 		if (scoreNum2 === matchPtDeterminer) {
 			isGameOver = true;
+			score1.classList.add("loser");
+			score2.classList.add("winner");
 		}
 		score2.innerText = scoreNum2;
 	}
-
-	// SKM "main" functioning code
-	// if (matchPtDeterminer !== 0 && scoreNum2 === matchPtDeterminer) {
-	// 	score1.style.color = "red";
-	// 	score2.style.color = "green";
-	// 	//Disabling button
-	// 	btn1.disabled = true;
-	// 	btn2.disabled = true;
-	// }
 });
 
 //Reset
@@ -70,11 +56,9 @@ function reset() {
 	scoreNum2 = 0;
 	score1.innerText = "0";
 	score2.innerText = "0";
+	score1.classList.remove("winner", "loser");
+	score2.classList.remove("winner", "loser"); //can simultaneously tell it remove both potential classes, whichever it finds.
 
 	// SKM "main" functioning code
-	// score1.style.color = "black";
-	// score2.style.color = "black";
 	// rounds.selectedIndex = 0;
-	// btn1.disabled = false;
-	// btn2.disabled = false;
 }
