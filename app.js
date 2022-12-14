@@ -8,7 +8,6 @@ let scoreNum2 = 0;
 
 //Drop-down & selection
 const rounds = document.querySelector("#rounds");
-let matchPtDeterminer = Number(rounds.value); //! not const!
 
 //Buttons
 const btn1 = document.querySelector(".btn1");
@@ -41,9 +40,10 @@ btn3.addEventListener("click", function () {
 
 //External Functions
 function gamePoint() {
+	let matchPtDeterminer = Number(rounds.value);
 	if (
-		(matchPtDeterminer && scoreNum1 === matchPtDeterminer) ||
-		scoreNum2 === matchPtDeterminer
+		matchPtDeterminer &&
+		(scoreNum1 === matchPtDeterminer || scoreNum2 === matchPtDeterminer)
 	) {
 		showWinner();
 	}
